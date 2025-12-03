@@ -1,0 +1,32 @@
+{
+  "name": "EMERGENT Framework",
+  "version": "v2.2-sanitized",
+  "description": "Sanitized core architecture for the EMERGENT research framework. Sensitive implementation details are intentionally omitted.",
+  "schema": {
+    "modules": [
+      {
+        "id": "perception",
+        "purpose": "Ingest and normalize multi-modal signals.",
+        "interfaces": ["ingest", "normalize", "tag"]
+      },
+      {
+        "id": "synthesis",
+        "purpose": "Combine signals into representations and candidate hypotheses.",
+        "interfaces": ["represent", "hypothesize"]
+      },
+      {
+        "id": "orchestration",
+        "purpose": "Manage workflows, safety gates, and audit trails.",
+        "interfaces": ["plan", "execute", "audit"]
+      }
+    ],
+    "safety": {
+      "sanitized": true,
+      "notes": "All operational behaviors and sensitive parameters removed. This file is intended for high-level architecture and sharing."
+    }
+  },
+  "metadata": {
+    "authors": ["theBridgewalker"],
+    "created": "2025-12-03"
+  }
+}
